@@ -6,7 +6,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	checkheaders "github.com/dkijkuit/checkheadersplugin"
+	checkheaders "github.com/jakob3xd/checkheadersplugin"
 )
 
 var required = true
@@ -70,9 +70,9 @@ func TestHeadersNotMatch(t *testing.T) {
 func TestHeadersNotMatchWhenSomeAreCorrect(t *testing.T) {
 	requestHeaders := map[string]string{
 		//wrong values
-		"test1": 							"should_not_match",
-		"test2": 							"should_not_match",
-		"test3": 							"should_not_match",
+		"test1": "should_not_match",
+		"test2": "should_not_match",
+		"test3": "should_not_match",
 		//correct values
 		"test4":                            "value4",
 		"testNumberRegex":                  "12345",
