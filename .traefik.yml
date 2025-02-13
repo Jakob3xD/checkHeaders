@@ -1,7 +1,7 @@
 displayName: Check request headers plugin
 type: middleware
 
-import: github.com/dkijkuit/checkheadersplugin
+import: github.com/jakob3xd/checkheadersplugin
 
 summary: "Checks the incoming request for specific headers and their values to be present and matching the configuration."
 
