@@ -1,3 +1,3 @@
-module github.com/dkijkuit/checkheadersplugin
+module github.com/jakob3xd/checkheadersplugin
 
-go 1.19
+go 1.23
