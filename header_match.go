@@ -143,10 +143,7 @@ func checkContains(requestValue *string, vHeader *SingleHeader) bool {
 	}
 
 	if vHeader.MatchType == string(MatchNone) {
-		if matchCount == 0 {
-			return true
-		}
-		return false
+		return matchCount == 0
 	}
 
 	if matchCount == 0 {
@@ -182,10 +179,7 @@ func checkRegex(requestValue *string, vHeader *SingleHeader) bool {
 	}
 
 	if vHeader.MatchType == string(MatchNone) {
-		if matchCount == 0 {
-			return true
-		}
-		return false
+		return matchCount == 0
 	}
 
 	if matchCount == 0 {
@@ -219,10 +213,7 @@ func checkRequired(requestValue *string, vHeader *SingleHeader) bool {
 	}
 
 	if vHeader.MatchType == string(MatchNone) {
-		if matchCount == 0 {
-			return true
-		}
-		return false
+		return matchCount == 0
 	}
 
 	if matchCount == 0 {
@@ -234,7 +225,7 @@ func checkRequired(requestValue *string, vHeader *SingleHeader) bool {
 
 // IsURLDecode checks whether a header value should be url decoded first before testing it
 func (s *SingleHeader) IsURLDecode() bool {
-	if s.URLDecode == nil || *s.URLDecode == false {
+	if s.URLDecode == nil || !*s.URLDecode {
 		return false
 	}
 
@@ -243,7 +234,7 @@ func (s *SingleHeader) IsURLDecode() bool {
 
 // IsDebug checks whether a header value should print debug information in the log
 func (s *SingleHeader) IsDebug() bool {
-	if s.Debug == nil || *s.Debug == false {
+	if s.Debug == nil || !*s.Debug {
 		return false
 	}
 
@@ -252,7 +243,7 @@ func (s *SingleHeader) IsDebug() bool {
 
 // IsContains checks whether a header value should contain the configured value
 func (s *SingleHeader) IsContains() bool {
-	if s.Contains == nil || *s.Contains == false {
+	if s.Contains == nil || !*s.Contains {
 		return false
 	}
 
@@ -261,7 +252,7 @@ func (s *SingleHeader) IsContains() bool {
 
 // IsRequired checks whether a header is mandatory in the request, defaults to 'true'
 func (s *SingleHeader) IsRequired() bool {
-	if s.Required == nil || *s.Required != false {
+	if s.Required == nil || *s.Required {
 		return true
 	}
 
@@ -270,7 +261,7 @@ func (s *SingleHeader) IsRequired() bool {
 
 // IsRegex checks whether a header value should be matched using regular expressions
 func (s *SingleHeader) IsRegex() bool {
-	if s.Regex == nil || *s.Regex == false {
+	if s.Regex == nil || !*s.Regex {
 		return false
 	}
 
