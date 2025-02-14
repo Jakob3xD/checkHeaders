@@ -16,7 +16,7 @@ pilot:
 experimental:
   devPlugin:
     goPath: /home/user/go
-    moduleName: github.com/Jakob3xD/checkHeaders
+    moduleName: github.com/Jakob3xD/checkheaders
 
 entryPoints:
   http:

@@ -6,7 +6,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	checkheaders "github.com/Jakob3xD/checkHeaders"
+	"github.com/Jakob3xD/checkheaders"
 )
 
 var required = true
