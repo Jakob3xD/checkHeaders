@@ -1,3 +1,3 @@
-module github.com/jakob3xd/checkheaders
+module github.com/Jakob3xD/checkHeaders
 
 go 1.23

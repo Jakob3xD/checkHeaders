@@ -1,7 +1,7 @@
 displayName: checkHeaders
 type: middleware
 
-import: github.com/jakob3xd/checkheaders
+import: github.com/Jakob3xD/checkHeaders
 
 summary: "Checks the incoming request for specific headers and their values to be present and matching the configuration."
 
