@@ -16,7 +16,7 @@ pilot:
 experimental:
   devPlugin:
     goPath: /home/user/go
-    moduleName: github.com/jakob3xd/checkheadersplugin
+    moduleName: github.com/jakob3xd/checkheaders
 
 entryPoints:
   http:
@@ -124,9 +124,9 @@ Supported configurations per header
 
 ```yaml
 middlewares:
-  my-checkheadersplugin:
+  my-checkheaders:
     plugin:
-      checkheadersplugin:
+      checkheaders:
         headers:
           - header:
             name: "HEADER_1"
@@ -176,9 +176,9 @@ You could configure the plugin to check for the `CN` and the `DC` fields:
 
 ```yaml
 middlewares:
-  my-checkheadersplugin:
+  my-checkheaders:
     plugin:
-      checkheadersplugin:
+      checkheaders:
         headers:
           - header:
             name: "X-Forwarded-Tls-Client-Cert-Info"
@@ -197,9 +197,9 @@ This plugin give you also the possibility to validate header via a regular expre
 
 ```yaml
 middlewares:
-  my-checkheadersplugin:
+  my-checkheaders:
     plugin:
-      checkheadersplugin:
+      checkheaders:
         headers:
           - header:
             name: "Authorization"
@@ -215,9 +215,9 @@ You can also use this plugin to check if header has a certain value that is not 
 
 ```yaml
 middlewares:
-  my-checkheadersplugin:
+  my-checkheaders:
     plugin:
-      checkheadersplugin:
+      checkheaders:
         headers:
           - header:
             name: "Content-Language"

@@ -1,4 +1,4 @@
-package checkheadersplugin_test
+package checkheaders_test
 
 import (
 	"context"
@@ -6,7 +6,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	checkheaders "github.com/jakob3xd/checkheadersplugin"
+	checkheaders "github.com/jakob3xd/checkheaders"
 )
 
 var required = true
