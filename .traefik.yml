@@ -1,4 +1,4 @@
-displayName: Check request headers plugin
+displayName: checkHeaders
 type: middleware
 
 import: github.com/jakob3xd/checkheadersplugin
